@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="databindingapp.example.com.databinding.ZoomActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_height="500dp"
+            android:src="@drawable/multi" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp">
+
+        </FrameLayout>
+    </RelativeLayout>
+
+    <SeekBar
+        android:max="60"
+        android:progress="30"
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+</LinearLayout>
