@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,28 +7,44 @@
     android:orientation="vertical"
     tools:context="databindingapp.example.com.databinding.ZoomActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="500dp">
 
-        <ImageView
-            android:id="@+id/image"
-            android:layout_width="match_parent"
-            android:scaleType="centerCrop"
-            android:layout_height="500dp"
+    <FrameLayout
+        android:background="@android:color/black"
+        android:layout_centerInParent="true"
+        android:layout_width="300dp"
+        android:layout_height="300dp">
+
+        <databindingapp.example.com.databinding.viewmodel.TouchImageView
+            android:id="@+id/imgimg"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
             android:src="@drawable/multi" />
+    </FrameLayout>
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="500dp">
+    <!--android:layout_height="match_parent" />-->
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/parent"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="500dp">-->
 
-        </FrameLayout>
-    </RelativeLayout>
+    <!--<FrameLayout-->
+    <!--android:id="@+id/frame"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="500dp">-->
+    <!--<ImageView-->
+    <!--android:id="@+id/image"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:scaleType="centerCrop"-->
+    <!--android:layout_height="500dp"-->
+    <!--android:visibility="gone"-->
+    <!--android:src="@drawable/multi" />-->
+    <!--</FrameLayout>-->
+    <!--</RelativeLayout>-->
 
     <SeekBar
-        android:max="60"
-        android:progress="30"
         android:id="@+id/seekbar"
         android:layout_width="match_parent"
-        android:layout_height="20dp" />
-</LinearLayout>
+        android:layout_height="20dp"
+        android:max="60"
+        android:progress="30" />
+</RelativeLayout>
